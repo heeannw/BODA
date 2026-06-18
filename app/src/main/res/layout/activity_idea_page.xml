@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- 상단 제목 + 필터 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="아이디어 제안"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/filterButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/f"
+            android:contentDescription="필터 버튼"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- 검색창 -->
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/search_bar_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="검색어를 입력하세요"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:paddingStart="8dp" />
+    </LinearLayout>
+
+    <!-- 카테고리 버튼 (노란색 셀렉터 적용) -->
+    <LinearLayout
+        android:id="@+id/categoryButtonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginBottom="8dp"
+        android:paddingHorizontal="12dp">
+
+        <Button
+            android:id="@+id/btnAd"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/category_button_selector_yellow"
+            android:text="광고"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:minWidth="64dp"
+            android:paddingHorizontal="20dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btnVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/category_button_selector_yellow"
+            android:text="영상"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:minWidth="64dp"
+            android:paddingHorizontal="20dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btnIssue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/category_button_selector_yellow"
+            android:text="이슈별"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:minWidth="64dp"
+            android:paddingHorizontal="20dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- 결과 개수 -->
+    <TextView
+        android:id="@+id/resultCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="총 12건"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp" />
+
+    <!-- 콘텐츠 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false" />
+
+    <!-- 하단 네비게이션 바 -->
+    <include layout="@layout/bottom_nav_custom" />
+</LinearLayout>

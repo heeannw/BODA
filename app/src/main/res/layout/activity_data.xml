@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 제목 -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="청소년 금융 사기 현황 2024"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- 드롭다운 -->
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/spinner_background"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:spinnerMode="dropdown"/>
+
+            <!-- 선택된 범주 텍스트 -->
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="청소년"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- 이미지로 대체된 그래프 -->
+            <ImageView
+                android:id="@+id/graphImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/g"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 강조 텍스트 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFDE58"
+                android:text="5년간 약 2배 증가"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2F2F2"
+                android:text="전체 금융사기 중 10대가 41%차지"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center" />
+
+            <!-- 관련 콘텐츠 RecyclerView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="관련 콘텐츠 추천"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dataRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 하단 네비게이션 바 -->
+    <include layout="@layout/bottom_nav_custom" />
+</LinearLayout>

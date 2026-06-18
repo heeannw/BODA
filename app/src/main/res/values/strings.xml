@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BODA</string>
+    <string name="home_title">오늘도 좋은 아이디어가 떠오르셨나요?</string>
+    <string name="search_hint">Search</string>
+    <string name="btn_go_to_recommend">이동하기</string>
+    <string name="recommend_text">오늘의 추천 퀴즈 보기&#10;이동 방법을 주제로 한 환경 캠페인</string>
+</resources>

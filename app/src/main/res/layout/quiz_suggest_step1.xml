@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 질문 안내 텍스트 -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="퀴즈로 제안하고\n싶은 주제를 골라주세요."
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold" />
+
+            <!-- 체크박스 항목 -->
+            <CheckBox
+                android:id="@+id/check_abuse"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="아동학대 · 방임"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+
+            <CheckBox
+                android:id="@+id/check_hate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="혐오 표현과 차별"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+
+            <CheckBox
+                android:id="@+id/check_elder"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="고령화 · 노인문제"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+
+            <CheckBox
+                android:id="@+id/check_cyber"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="사이버 폭력 · 디지털 성범죄"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+
+            <!-- 기타 항목 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <CheckBox
+                    android:id="@+id/check_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="기타:"
+                    android:minHeight="48dp"
+                    android:padding="8dp" />
+
+                <EditText
+                    android:id="@+id/edit_other"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="직접 입력"
+                    android:inputType="text"
+                    android:importantForAutofill="yes"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@android:color/black"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+
+            <!-- 추천 콘텐츠 라벨 -->
+            <TextView
+                android:id="@+id/recommendLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="관련 콘텐츠 추천"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="12dp" />
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 다음 버튼 -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다음으로"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_yellow_rounded"
+        android:paddingVertical="14dp" />
+
+    <!-- 하단 네비게이션 -->
+    <include layout="@layout/bottom_nav_custom" />
+</LinearLayout>

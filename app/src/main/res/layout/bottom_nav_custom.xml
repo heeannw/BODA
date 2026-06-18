@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customBottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:paddingTop="8dp"
+    android:paddingBottom="12dp"
+    android:elevation="8dp">
+
+    <!-- 메뉴 1: 홈 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/nav_home"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/a"
+            android:contentDescription="홈" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- 메뉴 2: 데이터 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/nav_data"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/b"
+            android:contentDescription="데이터" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데이터"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- 메뉴 3: 탐색 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/nav_explore"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/c"
+            android:contentDescription="탐색" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탐색"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- 메뉴 4: 제안하기 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/nav_suggest"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/d"
+            android:contentDescription="제안하기" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제안하기"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- 메뉴 5: 마이페이지 -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/nav_mypage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/e"
+            android:contentDescription="마이페이지" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마이페이지"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>

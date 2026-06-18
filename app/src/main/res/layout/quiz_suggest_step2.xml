@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 질문 안내 텍스트 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이 콘텐츠로\n어떤 질문을 던질 수 있을까요?"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold" />
+
+            <!-- 체크박스 항목 -->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아동학대를 주변에서 인지하기 쉬울까?"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="차별 표현은 모두가 민감하게 받아들일까?"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고령화 문제는 우리 사회 전체와 관련이 있을까?"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxEtc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타 : 직접입력"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editEtcInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="질문을 직접 입력하세요"
+                android:enabled="false"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 정답 체크 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이 질문의 정답은?"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp">
+
+                <RadioButton
+                    android:id="@+id/btnO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O" />
+
+                <RadioButton
+                    android:id="@+id/btnX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:layout_marginStart="24dp" />
+            </LinearLayout>
+
+            <!-- 자동 해설 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="자동 해설:"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txtEditExplanation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="해설 수정하기"
+                        android:textColor="#2D88E4"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/editExplanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="아동학대는 조용히 진행되어\n주변에서 쉽게 눈치채기 어렵습니다."
+                    android:textColor="@android:color/black"
+                    android:background="@android:color/transparent"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 다음 버튼 -->
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다음으로"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_yellow_rounded"
+        android:paddingVertical="14dp" />
+
+    <!-- 하단 네비게이션 -->
+    <include layout="@layout/bottom_nav_custom" />
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- ScrollView로 콘텐츠 감싸기 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/customBottomNav"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 닉네임 -->
+            <TextView
+                android:id="@+id/text_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홍길동 님의 마이페이지"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="24dp" />
+
+            <!-- 내가 만든 퀴즈 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 만든 퀴즈"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_my_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- 관심 공익광고 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="관심있는 공익광고"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_interest_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- 로그아웃 버튼 -->
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="로그아웃"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/btn_yellow_rounded"
+                android:paddingVertical="14dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ✅ 하단 네비게이션: width/height 꼭 명시 -->
+    <include
+        android:id="@+id/customBottomNav"
+        layout="@layout/bottom_nav_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 제목 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="퀴즈 미리보기"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 카테고리 및 콘텐츠 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아동 방임 문제"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="콘텐츠 : 공익광고 '그림 속의 아이'"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="28dp"
+                android:textSize="15sp" />
+
+            <!-- 질문 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Q. 아동학대는 주변에서 쉽게 인지할 수 있을까?"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
+                android:textSize="17sp" />
+
+            <!-- OX 선택 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="36dp">
+
+                <ImageView
+                    android:id="@+id/btnO"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/category_unselected"
+                    android:src="@drawable/o"
+                    android:padding="28dp"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/btnX"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/category_unselected"
+                    android:src="@drawable/x"
+                    android:padding="28dp"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <!-- 해설 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="해설 :"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아동학대는 조용하게 진행되어\n주변에서 알아차리기 어려운 경우가 많습니다."
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:textSize="15sp" />
+
+            <!-- 태그 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# 태그 : #아동보호  #사회인식개선  #공익광고"
+                android:textColor="#2D88E4"
+                android:textSize="16sp"
+                android:layout_marginBottom="40dp" />
+
+            <!-- ✅ 버튼을 ScrollView 내부로 이동 -->
+            <Button
+                android:id="@+id/btnTempSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="임시저장"
+                android:background="@drawable/btn_blue_rounded"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp"
+                android:paddingVertical="16dp" />
+
+            <Button
+                android:id="@+id/btnFinalSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저장하기"
+                android:background="@drawable/btn_yellow_rounded"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:paddingVertical="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 하단 네비게이션 -->
+    <include layout="@layout/bottom_nav_custom" />
+</LinearLayout>
